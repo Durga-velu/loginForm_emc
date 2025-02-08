@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="Wrapper">
+
+<!----------------------  NAVBAR ------------------------------>
+
+       <nav class="navbar">
+        <div class="nav_logo">
+            <span>LOGO</span>
+        </div>
+        <div class="nav_menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Blog</a></li>
+                <li><a href="#" class="link">Services</a></li>
+                <li><a href="#" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav_btn">
+           <button class="btn" id="loginBtn" onclick="login()">Sign In</button>
+           <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav_menu_btn"> 
+           <i class="fa-solid fa-bars" onclick="myMenuFunc()"></i>
+        </div>
+       </nav>
+
+<!----------------------  form ------------------------------>
+<main class="form_box">
+
+<!----------------------  login ------------------------------>
+<section class="login-container" id="login">
+    <div class="top">
+         <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+         <header>Login</header>
+    </div>
+        <div class="inputBox">
+            <input type="text" class="input_field" required placeholder="Username or Email">
+            <i class="fa-solid fa-user"></i>
+        </div>
+          <div class="inputBox">
+            <input type="password" class="input_field" required placeholder="Password">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="inputBox">
+            <input type="submit" class="submit"value="Sign In">
+          </div>
+          <div class="two-col">
+          <div class="one">
+            <input type="checkbox" id="login-check">
+            <label for="login-check">Remember Me</label>
+          </div>
+          <div class="two">
+            <label for="check"><a href="#">Forgot password?</a></label>
+          </div>
+        </div>
+
+    </section>
+
+
+<!----------------------  login ------------------------------>
+<section id="register">
+    <div class="top">
+         <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+         <header>Sign Up</header>
+    </div>
+    <div class="twoforms">
+        <div class="inputBox">
+          <input type="text" class="input_field" required placeholder="Firstname">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="inputBox">
+            <input type="text" class="input_field" required placeholder="Lastname">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+        <div class="inputBox">
+            <input type="email" class="input_field" required placeholder="Email">
+            <i class="fa-solid fa-envelope"></i>
+                  </div>
+          <div class="inputBox">
+            <input type="password" class="input_field" required placeholder="Password">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="inputBox">
+            <input type="submit" class="submit"value="Register">
+          </div>
+          <div class="two-col">
+          <div class="one">
+            <input type="checkbox" id="Register-check">
+            <label for="Register-check">Remember Me</label>
+          </div>
+          <div class="two">
+            <label for="check"><a href="#">Terms & Conditions</a></label>
+          </div>
+        </div>
+</section>
+</main>
+    </div>
+
+    <script>
+        function myMenuFunc(){
+        var z=document.getElementById("navMenu");
+        if(z.className =="nav_menu"){
+
+            z.className += " responsive";
+        }
+        else{
+            z.className ="nav_menu";
+        }
+    }
+        </script>
+
+    <script>
+        var a=document.getElementById("login");
+        var b=document.getElementById("register");
+        var x=document.getElementById("loginBtn");
+        var y=document.getElementById("registerBtn");
+
+function login(){
+    a.style.left="4px";
+    b.style.right="-520px";
+    x.className= x.className+" btn";
+    y.className=y.className+"logInBtn"
+    a.style.opacity=1;
+    b.style.opacity=0;
+}
+
+function register(){
+    a.style.left="-510px"
+    b.style.right="4px"
+      x.className= x.className+"logInBtn";
+    y.className=y.className+" btn"
+    a.style.opacity=0;
+    b.style.opacity=1;
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playball&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Redressed&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: url(/image/bg-3.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins", serif;
+    color: white;
+}
+
+.Wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(39,39,39,0.4)
+}
+.Wrapper .navbar{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width:100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(39,39,39,0.6),transparent;
+    backdrop-filter: blur(0,0,0,0.6) transparent;
+    z-index: 100;
+}
+.Wrapper .navbar .nav_logo{
+    font-size: 25px;
+    font-family: "Playball", serif;
+    font-weight: 600;
+}
+.Wrapper .navbar .nav_menu ul{
+    display: flex;
+
+}
+
+.Wrapper .navbar .nav_menu ul li{
+    list-style-type: none;
+}
+.Wrapper .navbar .nav_menu ul li .link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+.link:hover, .active, .focus{
+    border-bottom:1px solid white;
+}
+.Wrapper .navbar .nav_menu ul li .link:hover, .focus{
+    color:hotpink;
+}
+
+.Wrapper .navbar .nav_btn button{
+    margin-right: 20px;
+    width:120px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color:navajowhite;
+    padding: 5px;
+    color:black;
+    font-size: 18px;
+    transition: opacity 0.5s;
+}
+.Wrapper .navbar .nav_btn button:hover{
+ cursor: pointer;
+ opacity: 0.8;
+}
+
+.Wrapper .navbar .nav_btn #loginBtn{
+    background-color:navajowhite;
+}
+ .nav_menu_btn{
+    display: none;
+}
+
+.form_box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:510px;
+      overflow: hidden;
+    height: 420px;
+    z-index: 2;
+}
+.login-container{
+    display: flex;
+    position:absolute;
+    left: 4px;
+    flex-direction: column;
+    width: 500px;
+    transition: .5s ease-in-out;
+}
+#register{
+    display: flex;
+    position:absolute;
+    right: -520px;
+    flex-direction: column;
+    width: 500px;
+    transition: .5s ease-in-out;
+}
+.top{
+  
+    text-align: center;
+
+}
+
+.top span{
+   padding: 10px 0;
+   font-size: small;
+    color: white;
+    
+}
+.top span a{
+    margin-left: 5px;
+    font-weight: 500;
+    color: white;
+}
+header{
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+.twoforms{
+display: flex;
+gap:10px;
+}
+.input_field{
+font-size: 18px;
+background: rgba(270,270,270,0.2);
+color: white;
+height: 50px;
+width:100%;
+padding: 0 10px 0 45px;
+border: none;
+border-radius:30px ;
+outline: none;
+transition: 2s ease;
+}
+
+.input_field:hover, .input_field:focus{
+
+    background: rgba(270,270,270,0.25);
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+.inputBox i{
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: white;
+}
+.submit{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width:100%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: white;
+    background: rgba(270,270,270,0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.submit:hover{
+    background: rgba(270,270,270,0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0,0,0,0.2);
+
+}
+
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: small;
+    margin-top: 15px;
+}
+.two-col .one{
+    display: flex;
+    gap:5px;
+}
+.two label a{
+    text-decoration: none;
+    color: white;
+
+}
+.two label a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:786px){
+
+    .nav_btn{
+        display: none;
+    }
+    .nav_menu.responsive{
+        top:100px;
+    }
+    .nav_menu{
+        display: flex;
+        top:-800px;
+        justify-content: center;
+        position: absolute;
+        background: rgba(260,260,260,0.2);
+        width: 100%;
+        height:90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav_menu ul{
+        flex-direction: column;
+        text-align: center;
+
+    } .nav_menu_btn{
+       display: block;
+    }
+    .nav_menu_btn i{
+        font-size:25px;
+        color:white;
+        padding:10px;
+        background:rgba(260,260,260,0.2);
+        border-radius:50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav_menu_btn i:hover{
+        background: rgba(260,260,260,0.15);
+    }
+}
+
+
+@media only screen and (max-width:540px){
+.Wrapper{
+    min-height: 100vh;
+}
+.form_box{
+    width:100%;
+   
+}
+.login-container #register{
+      width:100%;
+      padding: 0 20px;
+}
+#register .twoforms{
+
+    flex-direction: column;
+}
+}
+
